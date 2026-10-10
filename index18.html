@@ -1,0 +1,3823 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kanee ❤️ Piuu | 1 Năm</title>
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Segoe UI",Arial,sans-serif;
+
+    color:white;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #3b172f 0%,
+            #170b18 45%,
+            #070408 100%
+        );
+
+    min-height:100vh;
+
+    overflow:hidden;
+}
+
+
+/* =========================================================
+   SAO NỀN
+========================================================= */
+
+#stars{
+    position:fixed;
+
+    inset:0;
+
+    z-index:0;
+
+    pointer-events:none;
+}
+
+.star{
+    position:absolute;
+
+    width:2px;
+    height:2px;
+
+    background:white;
+
+    border-radius:50%;
+
+    opacity:.5;
+
+    animation:
+        twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+
+    from{
+        opacity:.15;
+        transform:scale(.6);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1.4);
+    }
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.page{
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    z-index:2;
+
+    padding:20px;
+
+    overflow-y:auto;
+}
+
+.page.active{
+    display:flex;
+
+    animation:
+        pageIn 1s ease;
+}
+
+@keyframes pageIn{
+
+    from{
+        opacity:0;
+        transform:scale(1.02);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.container{
+
+    width:min(1100px,95vw);
+
+    max-height:95vh;
+
+    overflow-y:auto;
+
+    scrollbar-width:none;
+
+    text-align:center;
+
+    padding:25px;
+}
+
+.container::-webkit-scrollbar{
+    display:none;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.small-title{
+
+    font-size:13px;
+
+    letter-spacing:4px;
+
+    color:#ffabc8;
+
+    text-transform:uppercase;
+
+    margin-bottom:12px;
+}
+
+h1{
+
+    font-size:
+        clamp(45px,8vw,85px);
+
+    line-height:1.05;
+
+    margin-bottom:20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #ffabc8,
+            #fff
+        );
+
+    background-size:200% auto;
+
+    color:transparent;
+
+    background-clip:text;
+
+    -webkit-background-clip:text;
+
+    animation:
+        shine 5s linear infinite;
+}
+
+@keyframes shine{
+
+    to{
+        background-position:200% center;
+    }
+}
+
+h2{
+
+    font-size:
+        clamp(30px,5vw,55px);
+
+    margin-bottom:18px;
+}
+
+.subtitle{
+
+    max-width:750px;
+
+    margin:0 auto 25px;
+
+    color:#ffdce9;
+
+    line-height:1.8;
+
+    font-size:18px;
+}
+
+.quote{
+
+    font-family:Georgia,serif;
+
+    font-style:italic;
+
+    color:#ffd4e3;
+
+    line-height:1.9;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.btn{
+
+    border:none;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    padding:14px 28px;
+
+    margin:8px;
+
+    border-radius:999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f91,
+            #ff7eae
+        );
+
+    box-shadow:
+        0 8px 30px rgba(255,60,130,.3);
+
+    transition:.3s;
+}
+
+.btn:hover{
+
+    transform:
+        translateY(-3px)
+        scale(1.03);
+
+    box-shadow:
+        0 12px 40px rgba(255,60,130,.5);
+}
+
+
+/* =========================================================
+   MUSIC
+========================================================= */
+
+#musicBtn{
+
+    position:fixed;
+
+    top:18px;
+    right:18px;
+
+    z-index:100;
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    border:
+        1px solid rgba(255,255,255,.2);
+
+    background:
+        rgba(0,0,0,.35);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    backdrop-filter:blur(10px);
+}
+
+
+/* =========================================================
+   PAGE 1
+========================================================= */
+
+.login-box{
+
+    width:min(430px,92vw);
+
+    padding:45px 30px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    background:
+        rgba(255,255,255,.06);
+
+    border:
+        1px solid rgba(255,255,255,.13);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.45);
+}
+
+.heart-icon{
+
+    font-size:70px;
+
+    margin-bottom:15px;
+
+    animation:
+        heartBeat 1.5s infinite;
+}
+
+@keyframes heartBeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.18);
+    }
+}
+
+.login-input{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    margin:18px 0;
+
+    color:white;
+
+    background:
+        rgba(255,255,255,.1);
+
+    border:
+        1px solid rgba(255,255,255,.15);
+
+    text-align:center;
+
+    font-size:20px;
+
+    letter-spacing:8px;
+}
+
+.login-input::placeholder{
+
+    color:#aaa;
+
+    letter-spacing:2px;
+}
+
+.error{
+
+    min-height:24px;
+
+    color:#ff91b5;
+}
+
+
+/* =========================================================
+   PAGE 2
+========================================================= */
+
+.opening-card{
+
+    padding:45px;
+
+    border-radius:35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.09),
+            rgba(255,255,255,.03)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.4);
+}
+
+.date{
+
+    font-size:22px;
+
+    color:#ffabc8;
+
+    letter-spacing:3px;
+
+    margin:15px 0 25px;
+}
+
+.divider{
+
+    width:100px;
+
+    height:2px;
+
+    margin:25px auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ff7fae,
+            transparent
+        );
+}
+
+
+/* =========================================================
+   PAGE 3
+========================================================= */
+
+.timeline{
+
+    position:relative;
+
+    max-width:900px;
+
+    margin:35px auto;
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+    bottom:0;
+
+    width:2px;
+
+    background:
+        linear-gradient(
+            transparent,
+            #ff7eaa,
+            transparent
+        );
+}
+
+.timeline-item{
+
+    position:relative;
+
+    width:50%;
+
+    padding:15px 35px;
+
+    margin:20px 0;
+}
+
+.timeline-item:nth-child(odd){
+
+    left:0;
+
+    text-align:right;
+}
+
+.timeline-item:nth-child(even){
+
+    left:50%;
+
+    text-align:left;
+}
+
+.timeline-dot{
+
+    position:absolute;
+
+    top:30px;
+
+    width:16px;
+    height:16px;
+
+    border-radius:50%;
+
+    background:#ff7eaa;
+
+    box-shadow:
+        0 0 20px #ff7eaa;
+}
+
+.timeline-item:nth-child(odd)
+.timeline-dot{
+
+    right:-8px;
+}
+
+.timeline-item:nth-child(even)
+.timeline-dot{
+
+    left:-8px;
+}
+
+.memory-card{
+
+    padding:20px;
+
+    border-radius:22px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid rgba(255,255,255,.1);
+
+    backdrop-filter:blur(12px);
+}
+
+.memory-card p{
+
+    color:#ffdce9;
+
+    line-height:1.7;
+
+    margin-top:8px;
+}
+
+.photo-strip{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(6,1fr);
+
+    gap:10px;
+
+    max-width:800px;
+
+    margin:25px auto;
+}
+
+.photo-strip img{
+
+    width:100%;
+
+    aspect-ratio:1;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    transition:.4s;
+}
+
+.photo-strip img:hover{
+
+    transform:
+        scale(1.08)
+        rotate(2deg);
+
+    z-index:3;
+}
+
+
+/* =========================================================
+   PAGE 4 - GAME
+========================================================= */
+
+.game-progress{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:8px;
+
+    margin:15px;
+}
+
+.step{
+
+    width:30px;
+    height:30px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    color:#aaa;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border:
+        1px solid rgba(255,255,255,.15);
+}
+
+.step.done{
+
+    color:white;
+
+    background:#ff6f9f;
+
+    box-shadow:
+        0 0 15px rgba(255,100,160,.6);
+}
+
+.game-board{
+
+    position:relative;
+
+    width:min(1000px,95vw);
+
+    height:440px;
+
+    margin:25px auto;
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #11261b,
+            #1b3a25
+        );
+
+    border:
+        2px solid rgba(150,255,170,.15);
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.35);
+}
+
+#pathSvg{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+}
+
+#pathLine{
+
+    fill:none;
+
+    stroke:
+        rgba(255,255,255,.18);
+
+    stroke-width:8;
+
+    stroke-linecap:round;
+
+    stroke-dasharray:12 12;
+}
+
+.character{
+
+    position:absolute;
+
+    font-size:45px;
+
+    z-index:5;
+
+    transition:
+        left 1s ease,
+        top 1s ease;
+
+    filter:
+        drop-shadow(
+            0 8px 8px rgba(0,0,0,.35)
+        );
+}
+
+#fox{
+
+    left:5%;
+
+    top:73%;
+
+    cursor:pointer;
+}
+
+#rabbit{
+
+    right:5%;
+
+    top:10%;
+}
+
+.character-label{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-22px;
+
+    transform:
+        translateX(-50%);
+
+    white-space:nowrap;
+
+    font-size:12px;
+}
+
+.question-box{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:18px;
+
+    transform:
+        translateX(-50%);
+
+    width:min(620px,90%);
+
+    padding:15px;
+
+    border-radius:20px;
+
+    background:
+        rgba(0,0,0,.48);
+
+    backdrop-filter:blur(15px);
+
+    z-index:10;
+}
+
+.question-text{
+
+    line-height:1.5;
+
+    margin-bottom:10px;
+}
+
+.answers{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+}
+
+.answer{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:9px 14px;
+
+    border-radius:12px;
+
+    color:white;
+
+    background:
+        rgba(255,255,255,.1);
+
+    border:
+        1px solid rgba(255,255,255,.15);
+}
+
+.answer.correct{
+
+    background:#287a49;
+}
+
+.answer.wrong{
+
+    background:#852f45;
+}
+
+
+/* =========================================================
+   PAGE 5
+========================================================= */
+
+.secret-card{
+
+    max-width:650px;
+
+    padding:30px;
+
+    border-radius:30px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid rgba(255,255,255,.15);
+}
+
+.secret-card img{
+
+    width:100%;
+
+    max-height:450px;
+
+    object-fit:contain;
+
+    border-radius:20px;
+
+    margin:20px 0;
+}
+
+
+/* =========================================================
+   PAGE 6
+========================================================= */
+
+.letter-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:20px;
+
+    max-width:1000px;
+
+    margin:30px auto;
+}
+
+.letter-card{
+
+    min-height:200px;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    cursor:pointer;
+
+    transition:.4s;
+}
+
+.letter-card:hover{
+
+    transform:
+        translateY(-8px);
+}
+
+.envelope{
+
+    font-size:50px;
+
+    margin-bottom:12px;
+}
+
+.letter-content{
+
+    display:none;
+
+    color:#ffdce9;
+
+    line-height:1.8;
+
+    margin-top:15px;
+}
+
+.letter-card.open
+.letter-content{
+
+    display:block;
+}
+
+
+/* =========================================================
+   PAGE 7
+========================================================= */
+
+.counter{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin:30px auto;
+}
+
+.counter-box{
+
+    min-width:120px;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid rgba(255,255,255,.12);
+}
+
+.counter-number{
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    color:#ff9fc1;
+}
+
+.counter-label{
+
+    color:#aaa;
+
+    margin-top:5px;
+}
+
+.promise-box{
+
+    max-width:750px;
+
+    margin:30px auto;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    border:
+        1px solid rgba(255,255,255,.1);
+}
+
+.promise{
+
+    padding:15px;
+
+    color:#ffd9e7;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   PAGE 8 - TRÁI TIM
+========================================================= */
+
+#page8{
+
+    align-items:flex-start;
+
+    padding-top:25px;
+}
+
+.final-container{
+
+    width:min(1150px,96vw);
+
+    text-align:center;
+
+    padding:10px 10px 60px;
+}
+
+.final-date{
+
+    color:#ffabc8;
+
+    font-size:18px;
+
+    letter-spacing:5px;
+
+    margin-bottom:10px;
+}
+
+.final-title{
+
+    font-size:
+        clamp(40px,7vw,75px);
+
+    margin-bottom:8px;
+}
+
+.final-subtitle{
+
+    color:#ffdce9;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+    margin-bottom:20px;
+}
+
+
+/* =========================================================
+   HEART CONTAINER
+========================================================= */
+
+.heart-scene{
+
+    position:relative;
+
+    width:min(700px,95vw);
+
+    height:470px;
+
+    margin:0 auto 25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    animation:
+        heartSceneIn 1.5s ease;
+}
+
+@keyframes heartSceneIn{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            scale(.75);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            scale(1);
+    }
+}
+
+
+/*
+    Hình trái tim thật sự được tạo bằng
+    18 vị trí riêng biệt.
+*/
+
+.heart-photo{
+
+    position:absolute;
+
+    width:92px;
+
+    height:92px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    border:
+        3px solid rgba(255,255,255,.75);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.45),
+        0 0 18px rgba(255,100,160,.18);
+
+    opacity:0;
+
+    transform:
+        scale(.2)
+        rotate(-10deg);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease,
+        box-shadow .4s ease;
+
+    cursor:pointer;
+}
+
+
+/*
+   Khi ảnh xuất hiện
+*/
+
+.heart-photo.show{
+
+    opacity:1;
+
+    transform:
+        scale(1)
+        rotate(0deg);
+}
+
+
+/*
+   Hover
+*/
+
+.heart-photo:hover{
+
+    transform:
+        scale(1.18)
+        rotate(3deg);
+
+    z-index:30;
+
+    box-shadow:
+        0 10px 40px rgba(255,80,150,.45);
+}
+
+
+/* =========================================================
+   VỊ TRÍ 18 ẢNH - HÌNH TRÁI TIM
+========================================================= */
+
+/*
+        01     02       03
+      04  05   06 07   08 09
+      10 11  12 13 14  15 16
+        17  18
+           ❤️
+
+   Các vị trí được căn lại để tạo silhouette
+   hình trái tim.
+*/
+
+
+.heart-photo:nth-child(1){
+
+    left:18%;
+
+    top:8%;
+}
+
+.heart-photo:nth-child(2){
+
+    left:32%;
+
+    top:2%;
+}
+
+.heart-photo:nth-child(3){
+
+    left:46%;
+
+    top:8%;
+}
+
+.heart-photo:nth-child(4){
+
+    left:11%;
+
+    top:23%;
+}
+
+.heart-photo:nth-child(5){
+
+    left:25%;
+
+    top:18%;
+}
+
+.heart-photo:nth-child(6){
+
+    left:39%;
+
+    top:18%;
+}
+
+.heart-photo:nth-child(7){
+
+    left:53%;
+
+    top:18%;
+}
+
+.heart-photo:nth-child(8){
+
+    left:67%;
+
+    top:23%;
+}
+
+.heart-photo:nth-child(9){
+
+    left:75%;
+
+    top:31%;
+}
+
+.heart-photo:nth-child(10){
+
+    left:18%;
+
+    top:38%;
+}
+
+.heart-photo:nth-child(11){
+
+    left:32%;
+
+    top:38%;
+}
+
+.heart-photo:nth-child(12){
+
+    left:46%;
+
+    top:38%;
+}
+
+.heart-photo:nth-child(13){
+
+    left:60%;
+
+    top:38%;
+}
+
+.heart-photo:nth-child(14){
+
+    left:25%;
+
+    top:55%;
+}
+
+.heart-photo:nth-child(15){
+
+    left:39%;
+
+    top:55%;
+}
+
+.heart-photo:nth-child(16){
+
+    left:53%;
+
+    top:55%;
+}
+
+.heart-photo:nth-child(17){
+
+    left:32%;
+
+    top:72%;
+}
+
+.heart-photo:nth-child(18){
+
+    left:46%;
+
+    top:72%;
+}
+
+
+/* =========================================================
+   TIMELINE LETTER
+========================================================= */
+
+.heart-letter{
+
+    width:min(850px,95vw);
+
+    margin:0 auto;
+
+    padding:28px 32px;
+
+    text-align:left;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:18px;
+
+    line-height:1.95;
+
+    color:#ffe7ef;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.065),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    border-radius:28px;
+
+    box-shadow:
+        0 20px 80px rgba(0,0,0,.35);
+
+    white-space:pre-wrap;
+
+    overflow-wrap:anywhere;
+
+    min-height:80px;
+
+    transition:
+        box-shadow 1s ease;
+}
+
+
+/*
+   Sau khi gõ xong
+*/
+
+.heart-letter.finished{
+
+    box-shadow:
+        0 0 45px rgba(255,90,160,.2),
+        0 20px 80px rgba(0,0,0,.35);
+}
+
+
+/* =========================================================
+   CURSOR
+========================================================= */
+
+.typing-cursor{
+
+    display:inline-block;
+
+    width:2px;
+
+    height:1.15em;
+
+    margin-left:3px;
+
+    vertical-align:-3px;
+
+    background:#ff8db5;
+
+    animation:
+        cursorBlink .75s infinite;
+}
+
+@keyframes cursorBlink{
+
+    50%{
+        opacity:0;
+    }
+}
+
+
+/* =========================================================
+   FIREWORKS
+========================================================= */
+
+#fireworks{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:200;
+
+    pointer-events:none;
+}
+
+.firework{
+
+    position:absolute;
+
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:white;
+
+    animation:
+        explode 1.5s ease-out forwards;
+}
+
+@keyframes explode{
+
+    to{
+
+        transform:
+            translate(
+                var(--x),
+                var(--y)
+            );
+
+        opacity:0;
+    }
+}
+
+
+/* =========================================================
+   PAGE NUMBER
+========================================================= */
+
+.page-number{
+
+    position:fixed;
+
+    bottom:12px;
+
+    left:50%;
+
+    transform:
+        translateX(-50%);
+
+    z-index:100;
+
+    color:
+        rgba(255,255,255,.4);
+
+    font-size:12px;
+
+    letter-spacing:2px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:700px){
+
+    .container{
+
+        padding:15px;
+    }
+
+    .opening-card{
+
+        padding:30px 20px;
+    }
+
+    .photo-strip{
+
+        grid-template-columns:
+            repeat(3,1fr);
+    }
+
+    .timeline::before{
+
+        left:10px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even),
+    .timeline-item:nth-child(odd){
+
+        width:100%;
+
+        left:0;
+
+        padding:
+            10px 10px 10px 35px;
+
+        text-align:left;
+    }
+
+    .timeline-item:nth-child(odd)
+    .timeline-dot,
+    .timeline-item:nth-child(even)
+    .timeline-dot{
+
+        left:2px;
+
+        right:auto;
+    }
+
+    .letter-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .game-board{
+
+        height:520px;
+    }
+
+
+    /* ==============================================
+       TRÁI TIM MOBILE
+    ============================================== */
+
+    .heart-scene{
+
+        width:100%;
+
+        height:370px;
+
+        transform:
+            scale(.78);
+
+        transform-origin:
+            center top;
+
+        margin-bottom:-60px;
+    }
+
+    .heart-photo{
+
+        width:75px;
+
+        height:75px;
+
+        border-radius:14px;
+    }
+
+    .heart-letter{
+
+        font-size:16px;
+
+        line-height:1.85;
+
+        padding:22px;
+
+        margin-top:15px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     BACKGROUND
+========================================================= -->
+
+<div id="stars"></div>
+
+<div id="fireworks"></div>
+
+
+<!-- =========================================================
+     MUSIC
+========================================================= -->
+
+<button
+    id="musicBtn"
+    onclick="toggleMusic()">
+
+    🎵
+
+</button>
+
+
+<audio
+    id="music"
+    loop
+    preload="auto">
+
+    <source
+        src="Số 1 Thế Giới.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+<!-- =========================================================
+     PAGE 1
+========================================================= -->
+
+<section
+    class="page active"
+    id="page1">
+
+<div class="login-box">
+
+    <div class="heart-icon">
+        ❤️
+    </div>
+
+    <div class="small-title">
+        Một nơi chỉ dành cho hai chúng mình
+    </div>
+
+    <h2>
+        Kanee & Piuu
+    </h2>
+
+    <p class="subtitle">
+
+        Có một câu chuyện tình yêu
+        đã đi qua 365 ngày...
+
+        <br><br>
+
+        Và hôm nay,
+        anh muốn đưa em trở lại
+        từ ngày đầu tiên.
+
+    </p>
+
+    <div class="divider"></div>
+
+    <p>
+        🔐 Nhập mật mã của chúng mình
+    </p>
+
+    <input
+        id="password"
+        class="login-input"
+        type="password"
+        maxlength="4"
+        placeholder="••••">
+
+    <div
+        id="loginError"
+        class="error">
+    </div>
+
+    <button
+        class="btn"
+        onclick="unlock()">
+
+        Mở cánh cửa ❤️
+
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     PAGE 2
+========================================================= -->
+
+<section
+    class="page"
+    id="page2">
+
+<div class="container">
+
+<div class="opening-card">
+
+    <div class="small-title">
+        Chapter 01
+    </div>
+
+    <h1>
+        Chúng mình
+    </h1>
+
+    <div class="date">
+        18.10.2025 — 18.10.2026
+    </div>
+
+    <p class="subtitle">
+
+        Một năm trước,
+        hai con người chẳng biết tương lai
+        sẽ đưa mình đi đến đâu...
+
+        <br><br>
+
+        Nhưng rồi chúng mình đã gặp nhau.
+
+        <br>
+
+        Và từ khoảnh khắc ấy,
+        cuộc sống có thêm một người
+        để nhớ,
+        để thương,
+        để chờ.
+
+    </p>
+
+    <div class="divider"></div>
+
+    <p class="quote">
+
+        “Nếu được quay lại ngày đầu tiên,
+        anh vẫn sẽ chọn bước về phía em.”
+
+    </p>
+
+    <br>
+
+    <button
+        class="btn"
+        onclick="goPage(3)">
+
+        Tiếp tục câu chuyện →
+
+    </button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     PAGE 3
+========================================================= -->
+
+<section
+    class="page"
+    id="page3">
+
+<div class="container">
+
+    <div class="small-title">
+        Chapter 02
+    </div>
+
+    <h2>
+        Một năm có em ❤️
+    </h2>
+
+    <p class="subtitle">
+
+        Một năm không chỉ được tính bằng ngày tháng.
+
+        <br>
+
+        Nó được tính bằng những lần chúng mình
+        cười cùng nhau,
+        nhớ nhau,
+        giận nhau,
+        rồi lại tìm về bên nhau.
+
+    </p>
+
+    <div class="photo-strip">
+
+        <img src="ảnh/anh1.jpg">
+        <img src="ảnh/anh2.jpg">
+        <img src="ảnh/anh3.jpg">
+        <img src="ảnh/anh4.jpg">
+        <img src="ảnh/anh5.jpg">
+        <img src="ảnh/anh6.jpg">
+
+    </div>
+
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="memory-card">
+
+                <h3>
+                    🌱 Ngày đầu tiên
+                </h3>
+
+                <p>
+
+                    Mọi thứ bắt đầu từ những điều
+                    rất nhỏ...
+
+                    Một cuộc trò chuyện,
+                    một ánh nhìn,
+                    một cảm giác
+                    khó gọi thành tên.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="memory-card">
+
+                <h3>
+                    🌷 Những ngày đầu
+                </h3>
+
+                <p>
+
+                    Chúng mình bắt đầu hiểu nhau hơn,
+                    biết những điều em thích,
+                    những điều anh thích,
+                    và cả những điều
+                    khiến nhau vui.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="memory-card">
+
+                <h3>
+                    🌧 Những ngày khó khăn
+                </h3>
+
+                <p>
+
+                    Không phải ngày nào cũng hoàn hảo.
+
+                    Nhưng điều đáng quý là
+                    sau những lần buồn,
+                    chúng mình vẫn chọn ở lại.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="memory-card">
+
+                <h3>
+                    ❤️ Hôm nay
+                </h3>
+
+                <p>
+
+                    365 ngày đã đi qua.
+
+                    Và anh vẫn muốn viết tiếp
+                    những chương tiếp theo
+                    cùng em.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="btn"
+        onclick="goPage(4)">
+
+        Đi tiếp nhé, Piuu →
+
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     PAGE 4 - GAME
+========================================================= -->
+
+<section
+    class="page"
+    id="page4">
+
+<div class="container">
+
+    <div class="small-title">
+        Chapter 03
+    </div>
+
+    <h2>
+        🦊 Hành trình Cáo tìm Thỏ 🐰
+    </h2>
+
+    <p class="subtitle">
+
+        Cáo đang ở điểm xuất phát.
+
+        <br>
+
+        Thỏ đang chờ ở cuối con đường.
+
+        <br>
+
+        Muốn đến được bên Thỏ,
+        Cáo phải trả lời đúng từng câu hỏi.
+
+    </p>
+
+
+    <div class="game-progress">
+
+        <div class="step" id="step1">1</div>
+        <div class="step" id="step2">2</div>
+        <div class="step" id="step3">3</div>
+        <div class="step" id="step4">4</div>
+        <div class="step" id="step5">5</div>
+        <div class="step" id="step6">6</div>
+        <div class="step" id="step7">7</div>
+        <div class="step" id="step8">8</div>
+
+    </div>
+
+
+    <div class="game-board">
+
+        <svg
+            id="pathSvg"
+            viewBox="0 0 1000 440"
+            preserveAspectRatio="none">
+
+            <path
+                id="pathLine"
+                d="
+                M 70 330
+                L 170 250
+                L 270 340
+                L 370 180
+                L 470 270
+                L 570 130
+                L 670 240
+                L 770 120
+                L 900 70
+                "
+            />
+
+        </svg>
+
+
+        <div
+            id="fox"
+            class="character"
+            onclick="clickFox()">
+
+            🦊
+
+            <div class="character-label">
+                Cáo
+            </div>
+
+        </div>
+
+
+        <div
+            id="rabbit"
+            class="character">
+
+            🐰
+
+            <div class="character-label">
+                Thỏ
+            </div>
+
+        </div>
+
+
+        <div class="question-box">
+
+            <div
+                id="questionText"
+                class="question-text">
+
+                👆 Hãy bấm vào Cáo
+                để bắt đầu câu hỏi đầu tiên.
+
+            </div>
+
+            <div
+                id="answers"
+                class="answers">
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     PAGE 5
+========================================================= -->
+
+<section
+    class="page"
+    id="page5">
+
+<div class="container">
+
+    <div class="secret-card">
+
+        <div class="small-title">
+            Chapter 04
+        </div>
+
+        <h2>
+            🎁 Bí mật dành cho Piuu
+        </h2>
+
+        <p class="subtitle">
+
+            Cáo đã vượt qua tất cả thử thách
+            để tìm được Thỏ.
+
+        </p>
+
+        <img src="ảnh/anh13.jpg">
+
+        <p class="quote">
+
+            “Điều đặc biệt nhất không phải là
+            Cáo đã đi bao xa...
+
+            mà là cuối cùng,
+            Cáo vẫn tìm thấy Thỏ.”
+
+        </p>
+
+        <br>
+
+        <button
+            class="btn"
+            onclick="goPage(6)">
+
+            Mở những điều anh chưa nói →
+
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     PAGE 6
+========================================================= -->
+
+<section
+    class="page"
+    id="page6">
+
+<div class="container">
+
+    <div class="small-title">
+        Chapter 05
+    </div>
+
+    <h2>
+        💌 Những điều anh chưa từng nói
+    </h2>
+
+    <p class="subtitle">
+
+        Có những điều bình thường anh không nói ra.
+
+        <br>
+
+        Hôm nay anh muốn em
+        tự mở từng lá thư.
+
+    </p>
+
+
+    <div class="letter-grid">
+
+
+        <div
+            class="letter-card"
+            onclick="openLetter(this)">
+
+            <div class="envelope">
+                💌
+            </div>
+
+            <h3>
+                Điều anh biết ơn
+            </h3>
+
+            <div class="letter-content">
+
+                Cảm ơn em vì đã bước vào
+                cuộc sống của anh.
+
+                Cảm ơn em vì những lúc anh vui,
+                những lúc anh buồn,
+                và cả những lúc anh chưa đủ tốt.
+
+                <br><br>
+
+                Cảm ơn vì sau một năm,
+                em vẫn ở đây.
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="letter-card"
+            onclick="openLetter(this)">
+
+            <div class="envelope">
+                🌷
+            </div>
+
+            <h3>
+                Điều anh yêu
+            </h3>
+
+            <div class="letter-content">
+
+                Anh yêu những điều rất nhỏ ở em.
+
+                Cách em nói chuyện.
+
+                Cách em quan tâm.
+
+                Những lúc em vui.
+
+                Những lúc em làm nũng.
+
+                <br><br>
+
+                Có lẽ chính những điều nhỏ ấy
+                lại khiến anh thương em nhiều hơn
+                mỗi ngày.
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="letter-card"
+            onclick="openLetter(this)">
+
+            <div class="envelope">
+                🌙
+            </div>
+
+            <h3>
+                Điều anh mong
+            </h3>
+
+            <div class="letter-content">
+
+                Anh không cần một tình yêu
+                lúc nào cũng hoàn hảo.
+
+                Anh chỉ mong khi có chuyện xảy ra,
+                chúng mình vẫn chọn nói chuyện,
+                chọn hiểu nhau,
+                và chọn ở lại.
+
+                <br><br>
+
+                Bình yên bên nhau thật lâu,
+                vậy là đủ.
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="letter-card"
+            onclick="openLetter(this)">
+
+            <div class="envelope">
+                🫶
+            </div>
+
+            <h3>
+                Điều anh muốn giữ
+            </h3>
+
+            <div class="letter-content">
+
+                Anh muốn giữ những cuộc trò chuyện
+                đến khuya.
+
+                Những lần nhớ nhau.
+
+                Những lần giận rồi lại thương.
+
+                Và cả cảm giác
+                có một người luôn khiến anh
+                muốn trở về.
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="letter-card"
+            onclick="openLetter(this)">
+
+            <div class="envelope">
+                ⭐
+            </div>
+
+            <h3>
+                Một lời hứa
+            </h3>
+
+            <div class="letter-content">
+
+                Anh không hứa rằng
+                mọi ngày sau này đều hoàn hảo.
+
+                Nhưng anh sẽ cố gắng
+                để mỗi khi em cần,
+                em biết rằng anh vẫn ở đây.
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="letter-card"
+            onclick="openLetter(this)">
+
+            <div class="envelope">
+                ❤️
+            </div>
+
+            <h3>
+                Điều cuối cùng
+            </h3>
+
+            <div class="letter-content">
+
+                Sau tất cả...
+
+                Anh vẫn muốn người bên cạnh mình
+                trong những năm tiếp theo
+                là em.
+
+                ❤️
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="btn"
+        onclick="goPage(7)">
+
+        Đến chương tiếp theo →
+
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     PAGE 7
+========================================================= -->
+
+<section
+    class="page"
+    id="page7">
+
+<div class="container">
+
+    <div class="small-title">
+        Chapter 06
+    </div>
+
+    <h2>
+        🌙 Nếu được quay lại ngày đầu tiên
+    </h2>
+
+    <p class="subtitle">
+
+        Anh sẽ không thay đổi điều gì.
+
+        <br><br>
+
+        Vì nếu thay đổi một khoảnh khắc,
+        có lẽ anh sẽ không gặp được em
+        của ngày hôm nay.
+
+    </p>
+
+
+    <div class="counter">
+
+        <div class="counter-box">
+
+            <div
+                id="days"
+                class="counter-number">
+                365
+            </div>
+
+            <div class="counter-label">
+                ngày
+            </div>
+
+        </div>
+
+
+        <div class="counter-box">
+
+            <div
+                id="hours"
+                class="counter-number">
+                0
+            </div>
+
+            <div class="counter-label">
+                giờ
+            </div>
+
+        </div>
+
+
+        <div class="counter-box">
+
+            <div
+                id="minutes"
+                class="counter-number">
+                0
+            </div>
+
+            <div class="counter-label">
+                phút
+            </div>
+
+        </div>
+
+
+        <div class="counter-box">
+
+            <div
+                id="seconds"
+                class="counter-number">
+                0
+            </div>
+
+            <div class="counter-label">
+                giây
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="promise-box">
+
+        <h3>
+            Những điều anh muốn cùng em viết tiếp
+        </h3>
+
+        <div class="promise">
+            🌱 Cùng nhau trưởng thành.
+        </div>
+
+        <div class="promise">
+            🌷 Cùng nhau trải qua những ngày bình thường.
+        </div>
+
+        <div class="promise">
+            🌙 Cùng nhau vượt qua những ngày khó khăn.
+        </div>
+
+        <div class="promise">
+            ✈️ Cùng nhau đi đến những nơi chưa từng đến.
+        </div>
+
+        <div class="promise">
+            🏠 Cùng nhau xây dựng một nơi để trở về.
+        </div>
+
+        <div class="promise">
+            ❤️ Và quan trọng nhất...
+            vẫn chọn nhau.
+        </div>
+
+    </div>
+
+
+    <button
+        class="btn"
+        onclick="goPage(8)">
+
+        Đến trái tim của chúng mình ❤️
+
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     PAGE 8 - FINAL
+========================================================= -->
+
+<section
+    class="page"
+    id="page8">
+
+<div class="final-container">
+
+
+    <div class="final-date">
+
+        18.10.2025 — 18.10.2026
+
+    </div>
+
+
+    <h1 class="final-title">
+
+        Một năm bên em
+
+    </h1>
+
+
+    <p class="final-subtitle">
+
+        18 khoảnh khắc.
+
+        <br>
+
+        Một trái tim.
+
+        <br>
+
+        Một câu chuyện.
+
+        <br>
+
+        Và rất nhiều điều chưa kết thúc.
+
+    </p>
+
+
+    <!-- ===============================================
+         TRÁI TIM 18 ẢNH
+    =============================================== -->
+
+    <div
+        class="heart-scene"
+        id="heartScene">
+
+        <img
+            class="heart-photo"
+            src="ảnh/anh1.jpg"
+            onclick="showBigPhoto(this.src)">
+
+        <img
+            class="heart-photo"
+            src="ảnh/anh2.jpg"
+            onclick="showBigPhoto(this.src)">
+
+        <img
+            class="heart-photo"
+            src="ảnh/anh3.jpg"
+            onclick="showBigPhoto(this.src)">
+
+        <img
+            class="heart-photo"
+            src="ảnh/anh4.jpg"
+            onclick="showBigPhoto(this.src)">
+
+        <img
+            class="heart-photo"
+            src="ảnh/anh5.jpg"
+            onclick="showBigPhoto(this.src)">
+
+        <img
+            class="heart-photo"
+            src="ảnh/anh6.jpg"
+            onclick="showBigPhoto(this.src)">
+
+        <img
+            class="heart-photo"
+            src="ảnh/anh7.jpg"
+            onclick="showBigPhoto(this.src)">
+
+        <img
+            class="heart-photo"
+            src="ảnh/anh8.jpg"
+            onclick="showBigPhoto(this.src)">
+
+        <img
+            class="heart-photo"
+            src="ảnh/anh9.jpg"
+            onclick="showBigPhoto(this.src)">
+
+        <img
+            class="heart-photo"
+            src="ảnh/anh10.jpg"
+            onclick="showBigPhoto(this.src)">
+
+        <img
+            class="heart-photo"
+            src="ảnh/anh11.jpg"
+            onclick="showBigPhoto(this.src)">
+
+        <img
+            class="heart-photo"
+            src="ảnh/anh12.jpg"
+            onclick="showBigPhoto(this.src)">
+
+        <img
+            class="heart-photo"
+            src="ảnh/anh13.jpg"
+            onclick="showBigPhoto(this.src)">
+
+        <img
+            class="heart-photo"
+            src="ảnh/anh14.jpg"
+            onclick="showBigPhoto(this.src)">
+
+        <img
+            class="heart-photo"
+            src="ảnh/anh15.jpg"
+            onclick="showBigPhoto(this.src)">
+
+        <img
+            class="heart-photo"
+            src="ảnh/anh16.jpg"
+            onclick="showBigPhoto(this.src)">
+
+        <img
+            class="heart-photo"
+            src="ảnh/anh17.jpg"
+            onclick="showBigPhoto(this.src)">
+
+        <img
+            class="heart-photo"
+            src="ảnh/anh18.jpg"
+            onclick="showBigPhoto(this.src)">
+
+    </div>
+
+
+    <!-- ===============================================
+         LỜI NHẮN
+    =============================================== -->
+
+    <div
+        id="heartLetter"
+        class="heart-letter">
+    </div>
+
+
+    <br>
+
+
+    <button
+        class="btn"
+        onclick="restart()">
+
+        ❤️ Xem lại từ đầu
+
+    </button>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     PAGE NUMBER
+========================================================= -->
+
+<div
+    id="pageNumber"
+    class="page-number">
+
+    1 / 8
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   TẠO SAO
+========================================================= */
+
+const stars =
+    document.getElementById("stars");
+
+for(let i=0;i<120;i++){
+
+    const star =
+        document.createElement("div");
+
+    star.className="star";
+
+    star.style.left =
+        Math.random()*100+"%";
+
+    star.style.top =
+        Math.random()*100+"%";
+
+    star.style.animationDelay =
+        Math.random()*3+"s";
+
+    stars.appendChild(star);
+}
+
+
+/* =========================================================
+   CHUYỂN TRANG
+========================================================= */
+
+let currentPage=1;
+
+function goPage(number){
+
+    document
+        .querySelectorAll(".page")
+        .forEach(page=>{
+
+            page.classList.remove("active");
+
+        });
+
+
+    document
+        .getElementById(
+            "page"+number
+        )
+        .classList.add("active");
+
+
+    currentPage=number;
+
+
+    document
+        .getElementById("pageNumber")
+        .textContent=
+        number+" / 8";
+
+
+    /*
+       Khi tới trang cuối
+    */
+
+    if(number===8){
+
+        startFinalPage();
+
+    }
+
+}
+
+
+/* =========================================================
+   NHẠC
+========================================================= */
+
+const music =
+    document.getElementById("music");
+
+function playMusic(){
+
+    music
+        .play()
+        .then(()=>{
+
+            document
+                .getElementById("musicBtn")
+                .textContent="🔊";
+
+        })
+        .catch(()=>{
+
+            document
+                .getElementById("musicBtn")
+                .textContent="🎵";
+
+        });
+
+}
+
+
+function toggleMusic(){
+
+    if(music.paused){
+
+        playMusic();
+
+    }else{
+
+        music.pause();
+
+        document
+            .getElementById("musicBtn")
+            .textContent="🔇";
+
+    }
+
+}
+
+
+/* =========================================================
+   MẬT KHẨU
+========================================================= */
+
+function unlock(){
+
+    const password =
+        document
+        .getElementById("password")
+        .value;
+
+
+    const error =
+        document
+        .getElementById("loginError");
+
+
+    if(password==="1810"){
+
+        error.textContent="";
+
+        playMusic();
+
+        goPage(2);
+
+    }else{
+
+        error.textContent=
+            "Mật mã chưa đúng... thử lại nhé ❤️";
+
+    }
+
+}
+
+
+document
+    .getElementById("password")
+    .addEventListener(
+        "keydown",
+        function(e){
+
+            if(e.key==="Enter"){
+
+                unlock();
+
+            }
+
+        }
+    );
+
+
+/* =========================================================
+   LETTER CARD
+========================================================= */
+
+function openLetter(card){
+
+    card.classList.toggle("open");
+
+}
+
+
+/* =========================================================
+   GAME
+========================================================= */
+
+const questions=[
+
+{
+
+q:
+"Điều gì quan trọng nhất để tình yêu của Kanee và Piuu có thể đi lâu dài?",
+
+answers:[
+"Không bao giờ cãi nhau",
+"Tin tưởng và cùng nhau cố gắng ❤️",
+"Lúc nào cũng phải ở cạnh nhau",
+"Không cần nói chuyện"
+],
+
+correct:1
+
+},
+
+{
+
+q:
+"Khi hai người ở xa nhau, điều quan trọng nhất là gì?",
+
+answers:[
+"Không cần liên lạc",
+"Chỉ cần tặng quà",
+"Tin tưởng và quan tâm nhau ❤️",
+"Ai bận thì thôi"
+],
+
+correct:2
+
+},
+
+{
+
+q:
+"Khi Piuu buồn, Kanee nên làm gì?",
+
+answers:[
+"Mặc kệ",
+"Tranh luận với em",
+"Ở bên và lắng nghe ❤️",
+"Đi ngủ"
+],
+
+correct:2
+
+},
+
+{
+
+q:
+"Một năm vừa qua có ý nghĩa như thế nào với Kanee?",
+
+answers:[
+"Một năm bình thường",
+"Một năm rất đặc biệt ❤️",
+"Không có gì đáng nhớ",
+"Chỉ là thời gian"
+],
+
+correct:1
+
+},
+
+{
+
+q:
+"Nếu được chọn một điều cho tương lai của Kanee và Piuu?",
+
+answers:[
+"Cùng nhau bình yên thật lâu ❤️",
+"Không cần gặp nhau",
+"Mỗi người một nơi",
+"Không cần quan tâm"
+],
+
+correct:0
+
+},
+
+{
+
+q:
+"Điều Kanee mong nhất cho chuyện tình của hai người?",
+
+answers:[
+"Có thật nhiều tiền",
+"Có thật nhiều quà",
+"Thêm thật nhiều năm bên nhau ❤️",
+"Không bao giờ trưởng thành"
+],
+
+correct:2
+
+},
+
+{
+
+q:
+"Nếu một ngày Piuu mệt mỏi, Kanee muốn làm gì?",
+
+answers:[
+"Để em một mình mãi",
+"Ở cạnh và cho em cảm giác được yêu thương ❤️",
+"Không quan tâm",
+"Chờ em tự hết buồn"
+],
+
+correct:1
+
+},
+
+{
+
+q:
+"Người Kanee muốn tiếp tục viết câu chuyện này cùng là ai?",
+
+answers:[
+"Một người xa lạ",
+"Không biết nữa",
+"Piuu của anh ❤️",
+"Không quan trọng"
+],
+
+correct:2
+
+}
+
+];
+
+
+let currentQuestion=0;
+
+let foxStep=0;
+
+
+const foxPositions=[
+
+{
+left:"5%",
+top:"73%"
+},
+
+{
+left:"15%",
+top:"55%"
+},
+
+{
+left:"27%",
+top:"72%"
+},
+
+{
+left:"38%",
+top:"38%"
+},
+
+{
+left:"49%",
+top:"57%"
+},
+
+{
+left:"60%",
+top:"27%"
+},
+
+{
+left:"71%",
+top:"50%"
+},
+
+{
+left:"82%",
+top:"25%"
+},
+
+{
+left:"90%",
+top:"10%"
+}
+
+];
+
+
+function clickFox(){
+
+    if(currentPage!==4){
+        return;
+    }
+
+    if(foxStep>=8){
+        return;
+    }
+
+    showQuestion();
+
+}
+
+
+function showQuestion(){
+
+    const q=
+        questions[currentQuestion];
+
+
+    document
+        .getElementById("questionText")
+        .textContent=q.q;
+
+
+    const answers=
+        document
+        .getElementById("answers");
+
+
+    answers.innerHTML="";
+
+
+    q.answers.forEach(
+        (answer,index)=>{
+
+            const button=
+                document.createElement("button");
+
+            button.className="answer";
+
+            button.textContent=answer;
+
+            button.onclick=()=>{
+
+                checkAnswer(
+                    index,
+                    button
+                );
+
+            };
+
+            answers.appendChild(button);
+
+        }
+    );
+
+}
+
+
+function checkAnswer(index,button){
+
+    const q=
+        questions[currentQuestion];
+
+
+    if(index===q.correct){
+
+        button.classList.add("correct");
+
+
+        document
+            .querySelectorAll(".answer")
+            .forEach(btn=>{
+
+                btn.disabled=true;
+
+            });
+
+
+        moveFox();
+
+    }else{
+
+        button.classList.add("wrong");
+
+
+        setTimeout(()=>{
+
+            button.classList.remove("wrong");
+
+        },700);
+
+    }
+
+}
+
+
+function moveFox(){
+
+    foxStep++;
+
+
+    const position=
+        foxPositions[foxStep];
+
+
+    const fox=
+        document.getElementById("fox");
+
+
+    fox.style.left=
+        position.left;
+
+
+    fox.style.top=
+        position.top;
+
+
+    document
+        .getElementById(
+            "step"+foxStep
+        )
+        .classList.add("done");
+
+
+    setTimeout(()=>{
+
+        if(foxStep>=8){
+
+            finishGame();
+
+            return;
+
+        }
+
+
+        currentQuestion++;
+
+        showQuestion();
+
+    },1100);
+
+}
+
+
+function finishGame(){
+
+    const fox=
+        document.getElementById("fox");
+
+
+    fox.innerHTML=
+        `
+        🦊❤️
+
+        <div class="character-label">
+            Cáo đã tìm thấy Thỏ
+        </div>
+        `;
+
+
+    document
+        .getElementById("questionText")
+        .textContent=
+        "🎉 HOÀN THÀNH 8 / 8 — Cáo đã đến bên Thỏ rồi ❤️";
+
+
+    document
+        .getElementById("answers")
+        .innerHTML=
+        `
+        <button
+            class="btn"
+            onclick="goPage(5)">
+
+            Mở món quà bí mật 🎁
+
+        </button>
+        `;
+
+}
+
+
+/* =========================================================
+   COUNTER
+========================================================= */
+
+const anniversaryDate=
+    new Date(
+        "2025-10-18T00:00:00"
+    );
+
+
+function updateCounter(){
+
+    const now=
+        new Date();
+
+
+    let difference=
+        now-anniversaryDate;
+
+
+    if(difference<0){
+
+        difference=0;
+
+    }
+
+
+    const totalSeconds=
+        Math.floor(
+            difference/1000
+        );
+
+
+    const days=
+        Math.floor(
+            totalSeconds/86400
+        );
+
+
+    const hours=
+        Math.floor(
+            (totalSeconds%86400)/3600
+        );
+
+
+    const minutes=
+        Math.floor(
+            (totalSeconds%3600)/60
+        );
+
+
+    const seconds=
+        totalSeconds%60;
+
+
+    document
+        .getElementById("days")
+        .textContent=days;
+
+
+    document
+        .getElementById("hours")
+        .textContent=hours;
+
+
+    document
+        .getElementById("minutes")
+        .textContent=minutes;
+
+
+    document
+        .getElementById("seconds")
+        .textContent=seconds;
+
+}
+
+
+setInterval(
+    updateCounter,
+    1000
+);
+
+updateCounter();
+
+
+/* =========================================================
+   TRANG CUỐI
+========================================================= */
+
+let finalStarted=false;
+
+
+/*
+   Thứ tự xuất hiện:
+
+   1 → 18
+
+   Mỗi ảnh cách nhau 180ms.
+
+   Sau khi trái tim hoàn thành,
+   thư mới bắt đầu chạy.
+*/
+
+function startFinalPage(){
+
+    if(finalStarted){
+
+        return;
+
+    }
+
+
+    finalStarted=true;
+
+
+    const photos=
+        document.querySelectorAll(
+            ".heart-photo"
+        );
+
+
+    /*
+       Cho từng ảnh xuất hiện
+       theo thứ tự.
+    */
+
+    photos.forEach(
+        (photo,index)=>{
+
+            setTimeout(()=>{
+
+                photo.classList.add("show");
+
+            },index*180);
+
+        }
+    );
+
+
+    /*
+       Sau khi ảnh cuối xuất hiện
+       bắt đầu viết thư.
+    */
+
+    const letterDelay=
+        photos.length*180+1200;
+
+
+    setTimeout(()=>{
+
+        startTyping();
+
+        startFireworks();
+
+    },letterDelay);
+
+}
+
+
+/* =========================================================
+   LỜI THƯ
+========================================================= */
+
+const loveLetter=
+
+`Piuu à...
+
+Vậy là chúng mình đã đi cùng nhau được một năm rồi.
+
+Một năm...
+
+Nghe thì có vẻ không dài.
+
+Nhưng khi nhìn lại,
+anh mới nhận ra trong khoảng thời gian ấy
+chúng mình đã có thật nhiều kỷ niệm.
+
+Có những ngày chúng mình cười rất nhiều.
+
+Có những ngày chỉ cần một tin nhắn
+cũng đủ khiến cả ngày của anh vui hơn.
+
+Có những lúc nhớ nhau.
+
+Có những lúc giận nhau.
+
+Có những lúc khoảng cách khiến anh chỉ ước
+mình có thể xuất hiện ngay bên cạnh em.
+
+Nhưng rồi sau tất cả...
+
+chúng mình vẫn ở đây.
+
+Vẫn gọi nhau bằng những cái tên quen thuộc.
+
+Vẫn quan tâm nhau.
+
+Vẫn nhớ nhau.
+
+Và vẫn đang cùng nhau viết tiếp câu chuyện này.
+
+Piuu biết không...
+
+Điều anh trân trọng nhất trong một năm qua
+không phải là chúng mình đã có bao nhiêu ngày vui.
+
+Mà là sau cả những ngày không vui,
+chúng mình vẫn không bỏ cuộc.
+
+Anh biết anh không phải người hoàn hảo.
+
+Anh cũng biết đôi khi anh có thể vô tâm,
+có thể chưa hiểu em,
+có thể làm em buồn.
+
+Nhưng anh muốn em biết rằng...
+
+Anh luôn muốn mình tốt hơn
+để có thể yêu em tốt hơn.
+
+Anh không dám hứa rằng
+những năm sau sẽ không có những ngày buồn.
+
+Nhưng anh có thể hứa rằng
+nếu em vẫn muốn,
+anh sẽ vẫn cố gắng nắm tay em
+đi qua những ngày ấy.
+
+Anh muốn chúng mình có thêm
+thật nhiều ngày bình thường.
+
+Những buổi tối nói chuyện đến khuya.
+
+Những lần đi chơi chẳng cần kế hoạch.
+
+Những lần cùng nhau cười
+vì những chuyện rất ngốc.
+
+Những chuyến đi mà sau này
+chỉ cần nhìn lại một bức ảnh
+cũng đủ nhớ cả một khoảng thời gian.
+
+Anh muốn một ngày nào đó,
+khi chúng mình nhìn lại những năm tháng này,
+chúng mình có thể mỉm cười và nói:
+
+“May mà ngày ấy chúng mình
+đã không bỏ nhau.”
+
+Cảm ơn em...
+
+Cảm ơn vì đã đến.
+
+Cảm ơn vì đã ở lại.
+
+Cảm ơn vì đã cho anh
+một người để thương,
+một người để nhớ,
+một người để chờ,
+và một người để anh gọi là
+“Piuu của anh”.
+
+Nếu một năm đầu tiên
+là chương đầu của câu chuyện,
+
+thì anh mong những chương tiếp theo
+sẽ vẫn có tên của em.
+
+18.10.2025.
+
+Ngày chúng mình bắt đầu.
+
+18.10.2026.
+
+Ngày chúng mình nhìn lại
+một năm đã đi qua.
+
+Và anh hy vọng...
+
+18.10.2027,
+18.10.2028,
+18.10.2029...
+
+và thật nhiều ngày 18 tháng 10 sau đó,
+
+chúng mình vẫn có thể cùng nhau
+đón một ngày kỷ niệm nữa.
+
+Không cần một tình yêu hoàn hảo.
+
+Chỉ cần một tình yêu
+mà cả hai vẫn muốn cố gắng.
+
+Không cần lúc nào cũng ở cạnh nhau.
+
+Chỉ cần trong trái tim của nhau
+luôn có một chỗ để trở về.
+
+Piuu à...
+
+Một năm qua,
+cảm ơn em vì đã là một phần
+đẹp nhất trong câu chuyện của anh.
+
+Và nếu em hỏi anh
+sau một năm này anh muốn gì...
+
+Anh chỉ muốn nói:
+
+Anh muốn thêm một năm.
+
+Rồi thêm một năm nữa.
+
+Rồi thêm thật nhiều năm nữa.
+
+Vẫn là em.
+
+Vẫn là anh.
+
+Vẫn là chúng mình.
+
+Anh yêu em.
+
+Chúc mừng kỷ niệm 1 năm
+của Kanee và Piuu.
+
+— Kanee gửi Piuu ❤️`;
+
+
+/* =========================================================
+   TYPEWRITER
+========================================================= */
+
+let typingStarted=false;
+
+
+function startTyping(){
+
+    if(typingStarted){
+
+        return;
+
+    }
+
+
+    typingStarted=true;
+
+
+    const letter=
+        document
+        .getElementById(
+            "heartLetter"
+        );
+
+
+    /*
+       Không dùng innerHTML liên tục.
+
+       Tạo một text node riêng.
+
+       Vì vậy chữ đã chạy ra
+       sẽ KHÔNG BAO GIỜ mất.
+    */
+
+    letter.innerHTML="";
+
+
+    const textNode=
+        document.createTextNode("");
+
+
+    const cursor=
+        document.createElement("span");
+
+
+    cursor.className=
+        "typing-cursor";
+
+
+    letter.appendChild(
+        textNode
+    );
+
+
+    letter.appendChild(
+        cursor
+    );
+
+
+    let index=0;
+
+
+    const typingSpeed=24;
+
+
+    const timer=
+        setInterval(()=>{
+
+            if(index<loveLetter.length){
+
+                textNode.textContent +=
+                    loveLetter[index];
+
+                index++;
+
+
+            }else{
+
+                clearInterval(timer);
+
+
+                /*
+                   Chỉ xóa con trỏ.
+
+                   Toàn bộ chữ vẫn được giữ.
+                */
+
+                cursor.remove();
+
+
+                letter.classList.add(
+                    "finished"
+                );
+
+            }
+
+        },typingSpeed);
+
+}
+
+
+/* =========================================================
+   FIREWORKS
+========================================================= */
+
+function startFireworks(){
+
+    let count=0;
+
+
+    const interval=
+        setInterval(()=>{
+
+            createFirework();
+
+            count++;
+
+
+            if(count>=15){
+
+                clearInterval(interval);
+
+            }
+
+        },500);
+
+}
+
+
+function createFirework(){
+
+    const centerX=
+        10+Math.random()*80;
+
+
+    const centerY=
+        10+Math.random()*50;
+
+
+    for(let i=0;i<20;i++){
+
+        const spark=
+            document.createElement("div");
+
+
+        spark.className=
+            "firework";
+
+
+        spark.style.left=
+            centerX+"%";
+
+
+        spark.style.top=
+            centerY+"%";
+
+
+        const angle=
+            Math.random()*Math.PI*2;
+
+
+        const distance=
+            40+Math.random()*130;
+
+
+        spark.style.setProperty(
+            "--x",
+            Math.cos(angle)*distance+"px"
+        );
+
+
+        spark.style.setProperty(
+            "--y",
+            Math.sin(angle)*distance+"px"
+        );
+
+
+        document
+            .getElementById("fireworks")
+            .appendChild(spark);
+
+
+        setTimeout(()=>{
+
+            spark.remove();
+
+        },1600);
+
+    }
+
+}
+
+
+/* =========================================================
+   PHÓNG TO ẢNH
+========================================================= */
+
+function showBigPhoto(src){
+
+    const overlay=
+        document.createElement("div");
+
+
+    overlay.style.position="fixed";
+
+    overlay.style.inset="0";
+
+    overlay.style.zIndex="500";
+
+    overlay.style.background=
+        "rgba(0,0,0,.9)";
+
+    overlay.style.display="flex";
+
+    overlay.style.alignItems="center";
+
+    overlay.style.justifyContent="center";
+
+    overlay.style.padding="20px";
+
+
+    const image=
+        document.createElement("img");
+
+
+    image.src=src;
+
+
+    image.style.maxWidth="95%";
+
+    image.style.maxHeight="90%";
+
+    image.style.objectFit="contain";
+
+    image.style.borderRadius="20px";
+
+    image.style.boxShadow=
+        "0 20px 100px rgba(255,100,160,.35)";
+
+
+    overlay.appendChild(image);
+
+
+    overlay.onclick=()=>{
+
+        overlay.remove();
+
+    };
+
+
+    document.body.appendChild(
+        overlay
+    );
+
+}
+
+
+/* =========================================================
+   RESTART
+========================================================= */
+
+function restart(){
+
+    location.reload();
+
+}
+
+</script>
+
+</body>
+</html>
